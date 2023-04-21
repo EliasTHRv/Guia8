@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class main_CuentaBancaria {
 
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
         String respuesta = " ";
         int op;
         CuentaBancariaServicio c1 = new CuentaBancariaServicio();

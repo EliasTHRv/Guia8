@@ -20,16 +20,16 @@ import java.util.Scanner;
 public class CuentaBancariaServicio {
 
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    CuentaBancaria cuenta = new CuentaBancaria();
 
     public CuentaBancaria crearCuenta() {
-        CuentaBancaria cuenta = new CuentaBancaria();
 
         System.out.println("Ingrese el numero de cuenta: ");
         cuenta.setNumeroCuenta(leer.nextInt());
         System.out.println("Ingrese el DNI del cliente: ");
         cuenta.setDniCliente(leer.nextLong());
         System.out.println("Ingrese su saldo actual: ");
-        cuenta.setSaldoActual(leer.nextInt());
+        cuenta.setSaldoActual(leer.nextDouble());
 
         return cuenta;
     }
@@ -56,11 +56,8 @@ public class CuentaBancariaServicio {
     }
 
     public void extraccionRapida(CuentaBancaria cuenta) {
-        double extRa;
-        extRa = cuenta.getSaldoActual() * 0.2;
-
-        System.out.println("Su extraccion rapida es de " + "$ " + cuenta.getSaldoActual()*0.2);
-
+        double extRa = cuenta.getSaldoActual() * 0.2;
+        System.out.println("Su extraccion rapida es de " + "$ " + cuenta.getSaldoActual() * 0.2);
         cuenta.setSaldoActual(cuenta.getSaldoActual() - extRa);
     }
 
@@ -69,8 +66,8 @@ public class CuentaBancariaServicio {
     }
 
     public void consultarDatos(CuentaBancaria cuenta) {
-        System.out.println("El numero de cuenta es: "+cuenta.getNumeroCuenta());
-        System.out.println("El numero asociado a la cuenta es: "+cuenta.getDniCliente());
+        System.out.println("El numero de cuenta es: " + cuenta.getNumeroCuenta());
+        System.out.println("El numero asociado a la cuenta es: " + cuenta.getDniCliente());
     }
 
 }

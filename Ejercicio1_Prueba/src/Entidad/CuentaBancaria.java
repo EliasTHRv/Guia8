@@ -20,7 +20,6 @@ public double saldoActual;
         this.dniCliente = dniCliente;
         this.saldoActual = saldoActual;
     }
-    
     public int getNumeroCuenta() {
         return numeroCuenta;
     }
