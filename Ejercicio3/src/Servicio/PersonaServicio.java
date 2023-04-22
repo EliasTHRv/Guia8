@@ -32,13 +32,13 @@ public class PersonaServicio {
         persona.setNombre(leer.next());
         System.out.println("Ingrese la edad de la persona: ");
         persona.setEdad(leer.nextInt());
-        String sP;
+        char sP;
         do
         {
             System.out.println("Ingrese el sexo de la perona: F,H,O ");
-            sP = leer.next();
+            sP = leer.next().charAt(0);
 
-        } while (sP != "F" || sP != "H" || sP != "O");
+        } while (sP != 'F' && sP != 'H' && sP != 'O');
         persona.setSexo(sP);
         System.out.println("Ingrese el peso de la persona:");
         persona.setPeso(leer.nextDouble());
