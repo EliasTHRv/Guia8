@@ -37,8 +37,8 @@ public class CafeteraServicio {
         int op;
         System.out.println("Ingrese el tamaño de cafe deseado: ");
         System.out.println("Tamaño 1: 100ml ");
-        System.out.println("Tamaño 2  355ml");
-        System.out.println("Tamaño 3 500ml");
+        System.out.println("Tamaño 2: 355ml");
+        System.out.println("Tamaño 3: 500ml");
         op = leer.nextInt();
         switch (op)
         {
@@ -100,7 +100,7 @@ public class CafeteraServicio {
         double ag;
         System.out.println("Indique la cantidad de cafe que desea agregar:");
         ag = leer.nextDouble();
-        if (ag<cafetera.capacidadMaxima)
+        if (ag<=cafetera.capacidadMaxima)
         {
             cafetera.setCantidadActual(cafetera.cantidadActual + ag);
         }else{
