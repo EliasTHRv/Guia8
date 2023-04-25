@@ -27,21 +27,21 @@ import java.util.Scanner;
 public class ServicioRaiz {
 
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    Raiz nR = new Raiz();
-
-    public Raiz crearRaiz() {
-        System.out.print("Ingrese el valor de a: ");
-        nR.setA(leer.nextDouble());
-        System.out.print("Ingrese el valor de a: ");
-        nR.setB(leer.nextDouble());
-        System.out.print("Ingrese el valor de a: ");
-        nR.setC(leer.nextDouble());
-
-        return nR;
-    }
+//    Raiz nR = new Raiz();
+//
+//    public Raiz crearRaiz() {
+//        System.out.print("Ingrese el valor de a: ");
+//        nR.setA(leer.nextDouble());
+//        System.out.print("Ingrese el valor de b: ");
+//        nR.setB(leer.nextDouble());
+//        System.out.print("Ingrese el valor de c: ");
+//        nR.setC(leer.nextDouble());
+//
+//        return nR;
+//    }
 
     public static double getDiscriminante(Raiz raiz) {
-        return  Math.pow(raiz.getB(), 2) - (4 * raiz.getA()) * raiz.getC();       
+        return Math.pow(raiz.getB(), 2) - (4 * raiz.getA()) * raiz.getC();
     }
 
     public static boolean tieneRaices(Raiz raiz) {
@@ -55,30 +55,32 @@ public class ServicioRaiz {
     public static void obtenerRaices(Raiz raiz) {
         if (tieneRaices(raiz))
         {
-//            (-b±√((b^2)-(4*a*c)))/(2*a) 
+//            (-b±√((b^2)-(4*a*√((bc)))/(2*a) 
             double rD = Math.sqrt(getDiscriminante(raiz));
-            double r1 = (-raiz.getB() +- rD) / (2 * raiz.getA());
-            double r2 = (+raiz.getB() +- rD) / (2 * raiz.getA());
+            double r1 = (-raiz.getB() + -rD) / (2 * raiz.getA());
+            double r2 = (+raiz.getB() + -rD) / (2 * raiz.getA());
 
             System.out.println("La dos raices son: " + r1 + " y " + r2);
         }
-
-        
     }
 
     public static void obtenerRaiz(Raiz raiz) {
-        if (tieneRaiz(raiz)) {
+        if (tieneRaiz(raiz))
+        {
             double r3 = -raiz.getB() / (2 * raiz.getA());
             System.out.println("La unica raiz es: " + r3);
         }
     }
-    
+
     public static void calcularRaiz(Raiz raiz) {
-        if (tieneRaices(raiz)) {
+        if (tieneRaices(raiz))
+        {
             obtenerRaices(raiz);
-        } else if (tieneRaiz(raiz)) {
+        } else if (tieneRaiz(raiz))
+        {
             obtenerRaiz(raiz);
-        } else {
+        } else
+        {
             System.out.println("No hay solucion real para esta ecuacion.");
         }
     }
