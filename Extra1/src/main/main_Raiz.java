@@ -16,7 +16,7 @@ public static void main(String[] args) {
         
 //        Raiz nR1 = new Raiz(2, 6, 2);
         
-        ServicioRaiz.calcularRaiz(nR1);
+//        ServicioRaiz.calcularRaiz(nR1);
         
         
         nR1 = raiz1.crearRaiz();

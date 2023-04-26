@@ -27,18 +27,18 @@ import java.util.Scanner;
 public class ServicioRaiz {
 
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-//    Raiz nR = new Raiz();
-//
-//    public Raiz crearRaiz() {
-//        System.out.print("Ingrese el valor de a: ");
-//        nR.setA(leer.nextDouble());
-//        System.out.print("Ingrese el valor de b: ");
-//        nR.setB(leer.nextDouble());
-//        System.out.print("Ingrese el valor de c: ");
-//        nR.setC(leer.nextDouble());
-//
-//        return nR;
-//    }
+    Raiz nR = new Raiz();
+
+    public Raiz crearRaiz() {
+        System.out.print("Ingrese el valor de a: ");
+        nR.setA(leer.nextDouble());
+        System.out.print("Ingrese el valor de b: ");
+        nR.setB(leer.nextDouble());
+        System.out.print("Ingrese el valor de c: ");
+        nR.setC(leer.nextDouble());
+
+        return nR;
+    }
 
     public static double getDiscriminante(Raiz raiz) {
         return Math.pow(raiz.getB(), 2) - (4 * raiz.getA()) * raiz.getC();
